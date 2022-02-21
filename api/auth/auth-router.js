@@ -4,7 +4,9 @@ const bcrypt = require("bcrypt");
 
 router.post('/register', (req, res, next) => {
     const { username, password } = req.body;
-    const hash = bcrypt.hashSync(password)
+    const hash = bcrypt.hashSync(password, 12);
+    console.log(hash);
+    res.end();
 });
 
 router.post('/login', (req, res, next) => {
