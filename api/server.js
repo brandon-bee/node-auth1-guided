@@ -8,7 +8,7 @@ const server = express()
 server.use(express.static(path.join(__dirname, '../client')))
 server.use(express.json())
 
-server.use('/api/users', usersRouter)
+server.use('/api/users', usersRouter) test
 
 server.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client', 'index.html'))
